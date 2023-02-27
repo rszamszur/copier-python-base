@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier
+_commit: 0.2.0
+_src_path: https://github.com/fastapi-mvc/copier-generator.git
+copyright_date: 2023
+generator: python_base
+generator_name: python_base
+license: MIT
+nix: true
+repo_url: https://github.com/rszamszur/copier-python-base
