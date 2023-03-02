@@ -4,7 +4,7 @@
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    fastapi-mvc.url = "github:fastapi-mvc/fastapi-mvc?ref=0.25.0";
+    fastapi-mvc.url = "github:fastapi-mvc/fastapi-mvc?ref=0.27.0";
     nixpkgs.follows = "fastapi-mvc/nixpkgs";
   };
 

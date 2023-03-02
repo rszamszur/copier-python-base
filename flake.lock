@@ -7,16 +7,16 @@
         "poetry2nix": "poetry2nix"
       },
       "locked": {
-        "lastModified": 1675770712,
-        "narHash": "sha256-apqcijQek/Gfz1M7qnB5zKnl9ICox+CiiVjESBvyyxA=",
+        "lastModified": 1677709908,
+        "narHash": "sha256-NOlkxXPC7f/wq5zJlXpmS7cjXo4GspdCHc730Q/BRiY=",
         "owner": "fastapi-mvc",
         "repo": "fastapi-mvc",
-        "rev": "84a5224334aa37b8ca042e9fd0d179f63f58882c",
+        "rev": "e1a60851a95caeebbe0104bdc77f9f267dff3c48",
         "type": "github"
       },
       "original": {
         "owner": "fastapi-mvc",
-        "ref": "0.25.0",
+        "ref": "0.27.0",
         "repo": "fastapi-mvc",
         "type": "github"
       }
