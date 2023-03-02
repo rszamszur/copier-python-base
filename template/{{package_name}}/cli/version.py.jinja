@@ -1,0 +1,9 @@
+"""Command-line interface - version command ."""
+import click
+from {{package_name}}.version import __version__
+
+
+@click.command(help="Print the version number and exit.")
+def version() -> None:
+    """Define command-line interface version command."""
+    click.echo(__version__)

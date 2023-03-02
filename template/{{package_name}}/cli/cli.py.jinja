@@ -3,6 +3,7 @@ from typing import Dict, Any
 import logging
 
 import click
+from {{package_name}}.cli.version import version
 
 
 cmd_help = "{{project_name.capitalize()}} CLI root."
@@ -34,3 +35,6 @@ def cli(**options: Dict[str, Any]) -> None:
         format="[%(asctime)s] [%(process)s] [%(levelname)s] %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S %z",
     )
+
+
+cli.add_command(version)

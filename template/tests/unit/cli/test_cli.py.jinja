@@ -26,8 +26,7 @@ class TestCliRoot:
         assert result.exit_code == 2
 
     @pytest.mark.parametrize("args", [
-        ["serve", "--help"],
-        ["--verbose", "serve", "--help"]
+        ["--verbose", "version"],
     ])
     def test_should_exit_zero_when_invoked_with_options(self, cli_runner, args):
         # given / when

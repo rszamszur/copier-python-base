@@ -1,0 +1,13 @@
+from {{package_name}}.cli.version import version
+from {{package_name}}.version import __version__
+
+
+class TestCliVersionCommand:
+
+    def test_should_print_version_and_exit_zero(self, cli_runner):
+        # given / when
+        result = cli_runner.invoke(version)
+
+        # then
+        assert result.exit_code == 0
+        assert result.output == f"{__version__}\n"
