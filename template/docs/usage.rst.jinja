@@ -1,0 +1,37 @@
+Usage
+=====
+
+Development
+-----------
+
+Makefile
+~~~~~~~~
+
+Provided Makefile is a starting point for application and infrastructure development:
+
+.. code-block:: bash
+
+    Usage:
+      make <target>
+      help             Display this help
+      image            Build {{project_name}} image
+      clean-image      Clean {{project_name}} image
+      install          Install {{project_name}} with poetry
+      metrics          Run {{project_name}} metrics checks
+      unit-test        Run {{project_name}} unit tests
+      integration-test  Run {{project_name}} integration tests
+      docs             Build {{project_name}} documentation
+      mypy             Run {{project_name}} mypy checks
+
+
+Dockerfile
+~~~~~~~~~~
+
+This project provides Dockerfile for containerized environment.
+
+.. code-block:: bash
+
+    $ make image
+
+.. note::
+    Replace podman with docker if it's yours containerization engine.
