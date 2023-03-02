@@ -1,10 +1,17 @@
 """Custom fastapi-mvc python_base generator implementation."""
+from typing import Dict, Any
 import os
+import shutil
+from datetime import datetime
 
 import click
 import copier
 from fastapi_mvc.cli import GeneratorCommand
-from fastapi_mvc.utils import get_git_user_info, run_shell
+from fastapi_mvc.utils import (
+    get_git_user_info,
+    run_shell,
+    ensure_permissions,
+)
 from fastapi_mvc.constants import VERSION
 
 
@@ -28,7 +35,7 @@ answers_file = ".python-base.yml"
 
 
 @click.command(
-    cls=Generator,
+    cls=GeneratorCommand,
     category="Project",
     help=cmd_help,
     short_help=cmd_short_help,
@@ -151,12 +158,6 @@ def python_base(app_path: str, **options: Dict[str, Any]) -> None:
             user_defaults=data,
             answers_file=answers_file,
         )
-
-    copier.run_copy(
-        src_path=os.path.dirname(__file__),
-        data=data,
-        answers_file=answers_file,
-    )
 
     copier.printf(action="run", msg="git init", style=copier.Style.OK)
     run_shell(cmd=["git", "init"], cwd=app_abspath)
